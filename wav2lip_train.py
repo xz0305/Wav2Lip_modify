@@ -322,7 +322,7 @@ def train(device, model, train_data_loader, test_data_loader, optimizer,
                 mouth_loss += recon_loss(fake_roi,real_ori)
             ploss =  disc_emo.calculatePerceptionLoss(g,gt)
             mouth_loss = mouth_loss/g.shape[0]
-            # print(g.shape,gt.shape,lms.shape,mask.shape)
+            print(g.shape,gt.shape,lms.shape,mask.shape)
             # mask = mask.unsqueeze(1).repeat(1, 3, 1, 1, 1)
             # mouth_loss = recon_loss(mask*g,lms) 
             # mouth_loss = recon_loss(g,lms)
